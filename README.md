@@ -4,6 +4,7 @@
 This PowerShell script is used for IT-Manager SQL database backup. It creates a backup of all databases on a SQL Server instance, deletes old backup files in the local backup directory, copies the backup files created today to an online backup directory, and deletes backup files that are older than 7 days and were not created on Sundays or that are older than 90 days from the online backup directory.
 
 ## Prerequisites
+- PowerShell version 3.0 or later.
 - Microsoft.SqlServer.SmoExtended library.
 
 ## Configuration
