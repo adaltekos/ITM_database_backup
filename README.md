@@ -7,14 +7,8 @@ This PowerShell script is used for IT-Manager SQL database backup. It creates a 
 - PowerShell version 3.0 or later.
 - Microsoft.SqlServer.SmoExtended library.
 
-## Instructions
+## Configuration
 1. Set the local backup directory by providing the path to the `$backupDirectory` variable. For example, `$backupDirectory = "C:\backup\mssql_backup"`.
 2. Set the online backup directory by providing the path to the `$onlineDirectory` variable. For example, `$onlineDirectory = "\\192.168.0.0\backup_servers\database"`.
 3. Set the SQL Server instance location by providing the server instance name to the `$mySrvConn.ServerInstance` variable. For example, `$mySrvConn.ServerInstance = "192.168.0.0\database"`.
 4. Provide the login and password to the `$mySrvConn.Login` and `$mySrvConn.Password` variables, respectively.
-5. Run the script.
-
-## Notes
-- The script deletes backup files that are older than 7 days in the local backup directory.
-- The script copies backup files created today to the online backup directory.
-- The script deletes backup files that are older than 7 days and were not created on Sundays or that are older than 90 days from the online backup directory.
